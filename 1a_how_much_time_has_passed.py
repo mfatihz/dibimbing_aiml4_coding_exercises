@@ -31,7 +31,7 @@ Format harinya disingkat (kita input Mon alih-alih Monday), dan bulannya juga di
 def duration_count(input_1, input_2):
     # Write your code here
 
-    def is_kabisat(year):
+    def is_leap(year):
         if (year % 400) == 0:
             return True
         if (year % 100) == 0:
@@ -140,7 +140,7 @@ def duration_count(input_1, input_2):
     while (dif_year>0 or dif_month>0):
         dif_date += month_lengths[iterate_date['month']] - iterate_date['date']
         # jk bln feb pd tahun kabisat
-        if (iterate_date['month'] == 1) and is_kabisat(iterate_date['year']):
+        if (iterate_date['month'] == 1) and is_leap(iterate_date['year']):
             dif_date += 1
         
         # jk bln des
