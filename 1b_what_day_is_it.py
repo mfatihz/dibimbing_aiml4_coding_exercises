@@ -1,15 +1,11 @@
 """ 2. What Day is It?
 
 Dalam data time series, kita biasanya ingin tahu hari apa itu. Biasanya tidak cukup hanya mengetahui 'angka' tanggal, terutama ketika hari yang sangat penting untuk data kita (misalnya: analisis perilaku pelanggan). Dalam skenario analisis perilaku pelanggan, kita mungkin menemukan perilaku yang berbeda pada Monday - Friday vs Saturday - Sunday (akhir pekan). Mengetahui hari juga memungkinkan kita untuk memetakan beberapa musim.
- 
 
 Diberikan 3 input: tanggal pertama, lalu bulan, dan terakhir tahun. Bisakah Anda memberi tahu kami hari apa itu? Anda dapat menggunakan library apa pun yang Anda inginkan. Nama fungsi Anda harus bernama find_day.
 
- 
-
 Contoh 1:
 find_day(11,10,2021) harus memberikan output "Monday", karena 11 Oktober 2021 adalah hari Senin.
- 
 
 Contoh 2:
 find_day(17,8,1945) harus memberikan output "Friday", karena 17 Agustus 1945 adalah hari Jumat.
@@ -96,4 +92,8 @@ def find_day(day, month, year):
     
     return days[dif_date % 7]
 
-print(find_day(27,10,1980))
+""" 
+# test
+print(find_day(11,10,2021)) #harus memberikan output "Monday", karena 11 Oktober 2021 adalah hari Senin.
+print(find_day(17,8,1945)) #harus memberikan output "Friday", karena 17 Agustus 1945 adalah hari Jumat.
+"""
