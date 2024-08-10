@@ -19,7 +19,7 @@ find_day(17,8,1945) harus memberikan output "Friday", karena 17 Agustus 1945 ada
 def find_day(day, month, year):
     # Write your code here
     
-    def is_kabisat(year):
+    def is_leap(year):
         if year % 400 == 0:
             return True
         if year % 100 == 0:
@@ -65,7 +65,7 @@ def find_day(day, month, year):
         dif_date += month_lengths[iterate_m-1] - iterate_d
         
         # jk bln feb pd tahun kabisat
-        if (iterate_m == 2) and is_kabisat(iterate_y):
+        if (iterate_m == 2) and is_leap(iterate_y):
             dif_date += 1
         
         # update data stlh mencapai bln des
